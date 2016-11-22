@@ -10,5 +10,5 @@ class: azc-gray azl-topic
 
 ---
 # Tests
-* index(here) ([source](/documents/index/main.md))
-* [color-test](?color-test) ([source](/documents/color-test/main.md))
+* index(here) ([source](./documents/index/main.md))
+* [color-test](?color-test) ([source](./documents/color-test/main.md))

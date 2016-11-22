@@ -1,0 +1,150 @@
+// Basic Colors
+@azusa-white: rgb(255, 245, 224);
+@azusa-green: rgb(1, 189, 146);
+@azusa-purple: rgb(192, 79, 202);
+@azusa-skyblue: rgb(6, 169, 252);
+@azusa-emerald: rgb(0, 193, 218);
+@azusa-orange: rgb(255, 131, 0);
+@azusa-pink: rgb(255, 0, 116);
+@azusa-red: rgb(255, 0, 44);
+@azusa-gray: rgb(64, 69, 103);
+
+// Basic Font Sizes
+
+
+// Mix-In
+.azucolor(@background-col, @title-col, @text-col, @enum-col, @number-col) {
+  background-color: @background-col;
+  color: @text-col;
+  h1 {
+    color: @title-col;
+  }
+  li {
+    color: @enum-col;
+  }
+  div.remark-slide-number {
+    color: @number-col;
+  }
+}
+
+body {
+  font-family: "Avenir Next", Verdana, "ヒラギノ角ゴ Pro W3",
+  "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, Osaka,
+  sans-serif;
+}
+
+
+.azc-green-invert {
+  .azucolor(@azusa-green, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-green {
+  .azucolor(@azusa-white, @azusa-green, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-purple-invert {
+  .azucolor(@azusa-purple, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-purple {
+  .azucolor(@azusa-white, @azusa-purple, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-skyblue-invert {
+  .azucolor(@azusa-skyblue, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-skyblue {
+  .azucolor(@azusa-white, @azusa-skyblue, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-emerald-invert {
+  .azucolor(@azusa-emerald, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-emerald {
+  .azucolor(@azusa-white, @azusa-emerald, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-orange-invert {
+  .azucolor(@azusa-orange, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-orange {
+  .azucolor(@azusa-white, @azusa-orange, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-pink-invert {
+  .azucolor(@azusa-pink, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-pink {
+  .azucolor(@azusa-white, @azusa-pink, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+.azc-red-invert {
+  .azucolor(@azusa-red, @azusa-white, @azusa-gray, @azusa-white, @azusa-gray);
+}
+.azc-red {
+  .azucolor(@azusa-white, @azusa-red, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+
+
+.azc-gray-invert {
+  .azucolor(@azusa-gray, @azusa-white, @azusa-white, @azusa-white, @azusa-white);
+}
+.azc-gray {
+  .azucolor(@azusa-white, @azusa-gray, @azusa-gray, @azusa-gray, @azusa-gray);
+}
+
+.azc-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.azc-image-light {
+  .azucolor(rgb(220, 220, 220), @azusa-gray, @azusa-gray, @azusa-gray, @azusa-gray);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.azc-image-dark {
+  .azucolor(rgb(40, 40, 40), @azusa-white, @azusa-white, @azusa-white, @azusa-white);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+
+.azl-title {
+  vertical-align: middle;
+  text-align: left;
+  h1 {
+    font-size: 3.6rem;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0.3rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.5rem;
+    -webkit-margin-before: 0.3rem;
+    -webkit-margin-after: 0.3rem;
+    font-weight: bold;
+  }
+}
+
+.azl-notice {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.azl-topic {
+  h1 {
+    font-size: 2.2rem;
+  }
+  li {
+    font-size: 1.8rem;
+    margin: 0.6rem 0.6rem 0 0;
+    font-weight: bold;
+  }
+}
+
+div.remark-slide-number {
+  font-size: 1.0rem;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
